@@ -12,9 +12,8 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="White" Offset="1"/>
-                <GradientStop Color="#FFFFCC33" Offset="0.19"/>
-                <GradientStop Color="#FFFF6632" Offset="0.545"/>
-                <GradientStop Color="#FF3497C7" Offset="0.826"/>
+                <GradientStop Color="#FFF19321" Offset="0.23"/>
+                <GradientStop Color="#FF9E5F2A" Offset="0.774"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
@@ -22,6 +21,7 @@
             <ColumnDefinition Width="10"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        
         <Grid Background="{x:Null}">
             <TextBox TextWrapping="Wrap" Background="{x:Null}" Text="{Binding InputMessage}" Foreground="White" FontWeight="Bold" FontSize="24" ></TextBox>
         </Grid>
