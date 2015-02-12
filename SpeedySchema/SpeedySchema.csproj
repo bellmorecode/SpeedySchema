@@ -108,6 +108,7 @@
     <Compile Include="Config\DataTypeMappingConfigurationSection.cs" />
     <Compile Include="Engine\QueryParser.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TableQuery.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

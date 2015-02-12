@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SpeedySchema.exe" size="762824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SpeedySchema.exe" size="763336">
       <assemblyIdentity name="SpeedySchema" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>W6NmD5MFud46iVrf9840rFajVyA=</dsig:DigestValue>
+        <dsig:DigestValue>Svo+yazZ3OJNJ6JdHsqzHQHPFuM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

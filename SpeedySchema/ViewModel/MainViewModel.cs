@@ -1,5 +1,6 @@
 using GalaSoft.MvvmLight;
 using SpeedySchema.Engine;
+using System.Collections.ObjectModel;
 
 namespace SpeedySchema.ViewModel
 {
@@ -21,13 +22,14 @@ namespace SpeedySchema.ViewModel
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
+        
         public MainViewModel()
         {
             if (IsInDesignMode)
             {
                 // Code runs in Blend --> create design time data.
                 this.AppTitle = "Speedy Schema - DESIGN";
-                this.InputMessage = "::Contact";
+                this.InputMessage = "::Contact>";
                 this.SQLStatement = "CREATE TABLE Contact ()";
             }
             else
@@ -55,6 +57,8 @@ namespace SpeedySchema.ViewModel
 #endif
             }
         }
+
+        public ObservableCollection<TableQuery> Queries { get; set; }
 
         private string _apptitle;
         public string AppTitle
