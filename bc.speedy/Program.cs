@@ -1,32 +1,48 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace bc.speedy
 {
     internal class Program
     {
+        private static SchemaGenerator generator = null;
+
         static void Main(string[] args)
         {
-            
-        }
-    }
+            if (generator == null) // create on first pass.
+            {
+                generator = new SchemaGenerator();
+            }
 
-    public sealed class SchemaGenerator
-    {
-        public SchemaSettings Settings { get; set; } = null;
-        public SchemaGenerator()
-        {
-            Settings = new SchemaSettings();
-        }
-    }
-    
-    public sealed class SchemaSettings
-    {
-        public SchemaSettings()
-        {
-            // TODO: get valus from config file. 
-        }
+            Console.WriteLine("Enter some text expression to be evalutated? ");
+            string input, output;
+            do
+            {
+                Console.WriteLine();
+                input = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(input)) {
 
-        public string TableOwner { get; set; } = "dbo";
-        public bool AlwaysBracketIdentifiers { get; set; } = true;
+                    try
+                    {
+                        output = generator.Parse(input);
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine();
+                        Console.WriteLine(output);
+                        Console.ResetColor();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Error in query generation: {ex}");
+                        Console.ResetColor();
+                    }
+
+
+                    Console.WriteLine();
+                }
+                
+            } while (!string.IsNullOrWhiteSpace(input));
+
+        }
     }
 }
