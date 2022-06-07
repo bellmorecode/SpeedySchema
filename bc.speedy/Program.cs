@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
-
 namespace bc.speedy
 {
     internal class Program
     {
         private static SchemaGenerator generator = null;
-
         static void Main(string[] args)
         {
             if (generator == null) // create on first pass.
             {
                 generator = new SchemaGenerator();
             }
-
             Console.WriteLine("Enter some text expression to be evalutated? ");
             string input, output;
             do
@@ -36,13 +32,10 @@ namespace bc.speedy
                         Console.WriteLine($"Error in query generation: {ex}");
                         Console.ResetColor();
                     }
-
-
                     Console.WriteLine();
                 }
                 
             } while (!string.IsNullOrWhiteSpace(input));
-
         }
     }
 }
