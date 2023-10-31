@@ -34,7 +34,6 @@ namespace bc.speedy
                     }
                     Console.WriteLine();
                 }
-                
             } while (!string.IsNullOrWhiteSpace(input));
         }
     }
