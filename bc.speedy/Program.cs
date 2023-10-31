@@ -10,7 +10,7 @@ namespace bc.speedy
             {
                 generator = new SchemaGenerator();
             }
-            Console.WriteLine("Enter some text expression to be evalutated? ");
+            Console.WriteLine("Enter some text expression to be evaluated? ");
             string input, output;
             do
             {
